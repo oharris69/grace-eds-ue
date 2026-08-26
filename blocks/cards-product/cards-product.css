@@ -1,0 +1,87 @@
+/* Block: cards-product -- product card grid (image + title + caption), whole card links out */
+
+.cards-product > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+/* Cards are borderless/transparent on the source -- image on top, centered text below */
+.cards-product > ul > li {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+/* Image: full width, wide landscape crop (~2.2:1 on source), cover */
+.cards-product .cards-product-card-image {
+  line-height: 0;
+}
+
+.cards-product .cards-product-card-image p {
+  margin: 0;
+}
+
+.cards-product > ul > li img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 280 / 127;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Text block: centered, sits below image */
+.cards-product .cards-product-card-body {
+  margin: 0;
+  padding-top: 24px;
+  text-align: center;
+}
+
+/* Caption: Roboto Slab regular, black, centered */
+.cards-product .cards-product-card-body p {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Hide the "PROMOTION" eyebrow -- data artifact, hidden on source */
+.cards-product .cards-product-card-body > p:first-child {
+  display: none;
+}
+
+/* Product title: Roboto Slab, semibold, brand link green, centered */
+.cards-product .cards-product-card-body h3 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--link-color);
+  text-align: center;
+}
+
+.cards-product .cards-product-card-body h3 a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* tablet: 2-up */
+@media (width >= 600px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* desktop: 4-up */
+@media (width >= 900px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

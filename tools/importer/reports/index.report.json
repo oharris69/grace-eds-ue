@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://grace.com/",
+  "path": "index",
+  "timestamp": "2026-08-26T15:03:11.592Z",
+  "title": "Home",
+  "template": "homepage",
+  "blocks": [
+    "hero-fullbleed",
+    "hero-fullbleed",
+    "cards-product",
+    "columns-feature",
+    "cards-industry",
+    "columns-video",
+    "cards-insights"
+  ]
+}

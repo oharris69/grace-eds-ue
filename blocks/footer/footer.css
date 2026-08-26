@@ -1,20 +1,81 @@
+/* Grace footer — dark slate (#1e1e1e), centered single column.
+   Extracted from grace.com: white text, 55px vertical padding,
+   copyright + quick-links row + italic trademark + Standard Industries logo. */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--dark-color); /* #1e1e1e */
+  color: #fff;
+  font-family: var(--body-font-family);
+}
+
+footer .footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 55px 24px;
+  text-align: center;
 }
 
 footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  margin: 0 0 20px;
+}
+
+footer .footer > div:last-child {
+  margin-bottom: 0;
 }
 
 footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+/* copyright */
+footer .footer .footer-copyright p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* quick links */
+footer .footer .footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+}
+
+footer .footer .footer-links a:any-link {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+footer .footer .footer-links a:hover {
+  color: var(--accent-color);
+}
+
+/* trademark */
+footer .footer .footer-trademark p,
+footer .footer .footer-trademark em {
+  color: var(--light-color); /* #e6e7e8 */
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Standard Industries logo */
+footer .footer .footer-brand img {
+  width: 150px;
+  height: auto;
+}
+
+footer .footer .footer-brand a:any-link {
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+footer .footer .footer-brand a:hover {
+  opacity: 0.8;
 }

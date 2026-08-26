@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-insights",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-25T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://grace.com/",
+    "originPage": "Grace corporate homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "wide",
+    "purpose": "blog",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + category eyebrow + linked title + read-more link",
+    "buttonCount": 4,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "blog/insights/news card grids with category eyebrow + title + read-more",
+      "editorial feature lists (one featured + stacked items)"
+    ],
+    "notSuitableFor": [
+      "product tiles",
+      "image-only label grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-25T00:00:00.000Z"
+  }
+}

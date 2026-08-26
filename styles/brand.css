@@ -1,0 +1,28 @@
+/* Brand design tokens extracted from https://grace.com/ */
+:root {
+  /* Fonts */
+  --heading-font-family: "Roboto Slab", serif;
+  --body-font-family: "Roboto", sans-serif;
+
+  /* Colors */
+  --background-color: #fff;
+  --text-color: #000;
+  --link-color: #27853c;
+  --link-hover-color: #1f6b30;
+  --accent-color: #7ac143;
+  --light-color: #e6e7e8;
+  --dark-color: #1e1e1e;
+
+  /* Spacing */
+  --section-padding: 60px;
+  --content-max-width: 1200px;
+  --nav-height: 80px;
+
+  /* Heading sizes (desktop) */
+  --heading-size-xxl: 42px;
+  --heading-size-xl: 30px;
+  --heading-size-l: 24px;
+  --heading-size-m: 20px;
+  --heading-size-s: 18px;
+  --heading-size-xs: 16px;
+}

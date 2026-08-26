@@ -1,0 +1,144 @@
+/* Block: columns-video -- "We Are Grace" media callout
+   Source: grace.com div.cmp-media-callout.slate-bkgd.white */
+
+.columns-video {
+  background-color: var(--dark-color); /* #1e1e1e */
+  color: #fff;
+}
+
+/* row: stack on mobile (image first, then text) */
+.columns-video > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* image cell: renders first on mobile, no padding, positioning context */
+.columns-video .columns-video-img-col {
+  order: 0;
+  padding: 0;
+}
+
+.columns-video .columns-video-img-col p {
+  margin: 0;
+}
+
+.columns-video .columns-video-img-col a {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+/* text cell */
+.columns-video > div > div:not(.columns-video-img-col) {
+  order: 1;
+  padding: 32px 20px;
+  text-align: left;
+}
+
+.columns-video h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl); /* 30px desktop */
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.columns-video > div > div:not(.columns-video-img-col) p {
+  margin: 12px 0 0;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* "Watch the video" link */
+.columns-video a:any-link {
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.columns-video a:hover {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.85;
+}
+
+/* poster image */
+.columns-video img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* white circular play button */
+.columns-video .columns-video-img-col a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s ease;
+}
+
+/* play triangle */
+.columns-video .columns-video-img-col a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 24px;
+  border-color: transparent transparent transparent #000;
+  transform: translate(-40%, -50%);
+}
+
+.columns-video .columns-video-img-col a:hover::before {
+  background-color: var(--accent-color);
+}
+
+/* "Watch the video" chevron (text column) */
+.columns-video > div > div:not(.columns-video-img-col) p:last-child a::after {
+  content: "\203A"; /* › chevron */
+  margin-left: 8px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* desktop: two columns side by side */
+@media (width >= 900px) {
+  .columns-video > div {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* text column ~30%, order left */
+  .columns-video > div > div:not(.columns-video-img-col) {
+    flex: 0 0 30%;
+    order: 0;
+    padding: 40px 40px 40px 60px;
+    text-align: left;
+  }
+
+  /* image column ~70%, full height, order right */
+  .columns-video .columns-video-img-col {
+    flex: 0 0 70%;
+    order: 1;
+    align-self: stretch;
+  }
+
+  .columns-video h2 {
+    font-size: 30px;
+  }
+}

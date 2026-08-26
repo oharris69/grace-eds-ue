@@ -1,3 +1,5 @@
+@import url('brand.css');
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -11,40 +13,41 @@
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* colors (from brand.css, restated for fallback) */
+  --background-color: #fff;
+  --light-color: #e6e7e8;
+  --dark-color: #1e1e1e;
+  --text-color: #000;
+  --link-color: #27853c;
+  --link-hover-color: #1f6b30;
+  --accent-color: #7ac143;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: "Roboto", roboto-fallback, sans-serif;
+  --heading-font-family: "Roboto Slab", roboto-slab-fallback, serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 18px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
 
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  /* heading sizes (mobile-first) */
+  --heading-font-size-xxl: 32px;
+  --heading-font-size-xl: 26px;
+  --heading-font-size-l: 22px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 80px;
 }
 
 /* fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
+  font-family: roboto-slab-fallback;
+  size-adjust: 105%;
+  src: local('Georgia');
 }
 
 @font-face {
@@ -60,13 +63,13 @@
     --body-font-size-s: 16px;
     --body-font-size-xs: 14px;
 
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+    /* heading sizes (desktop, from grace.com) */
+    --heading-font-size-xxl: 42px;
+    --heading-font-size-xl: 30px;
+    --heading-font-size-l: 24px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 18px;
+    --heading-font-size-xs: 16px;
   }
 }
 
@@ -107,12 +110,16 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 300;
+  line-height: 1.3;
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 100;
+}
+
 h2 { font-size: var(--heading-font-size-xl); }
 h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
@@ -179,10 +186,11 @@ button.button {
   max-width: 100%;
   margin: 0;
   border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font: inherit;
-  font-weight: 500;
+  border-radius: 0;
+  padding: 16px 30px;
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.25;
   text-decoration: none;
   cursor: pointer;
@@ -199,18 +207,18 @@ button.button:disabled {
 
 a.button.primary,
 button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--text-color);
 }
 
 a.button.primary:hover,
 a.button.primary:focus-visible,
 button.button.primary:hover,
 button.button.primary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
+  border-color: var(--link-color);
+  background-color: var(--link-color);
+  color: #fff;
 }
 
 a.button.primary[aria-disabled="true"],
@@ -254,17 +262,18 @@ button.button.secondary:disabled:focus-visible {
 /* high-impact call-to-action */
 a.button.accent,
 button.button.accent {
-  border-color: var(--link-color);
-  background-color: var(--link-color);
-  color: var(--background-color);
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--text-color);
 }
 
 a.button.accent:hover,
 a.button.accent:focus-visible,
 button.button.accent:hover,
 button.button.accent:focus-visible {
-  border-color: var(--link-hover-color);
-  background-color: var(--link-hover-color);
+  border-color: var(--link-color);
+  background-color: var(--link-color);
+  color: #fff;
 }
 
 a.button.accent[aria-disabled="true"],
@@ -318,8 +327,37 @@ main > .section:first-of-type {
 
 /* section metadata */
 main .section.light,
-main .section.highlight {
+main .section.highlight,
+main .section.light-gray {
   background-color: var(--light-color);
   margin: 0;
-  padding: 40px 0;
+  padding: 60px 0;
+}
+
+main .section.dark,
+main .section.dark-slate {
+  background-color: var(--dark-color);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+main .section.dark a:any-link,
+main .section.dark-slate a:any-link {
+  color: #fff;
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6,
+main .section.dark-slate h1,
+main .section.dark-slate h2,
+main .section.dark-slate h3,
+main .section.dark-slate h4,
+main .section.dark-slate h5,
+main .section.dark-slate h6 {
+  color: #fff;
 }

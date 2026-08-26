@@ -1,0 +1,37 @@
+{
+  "variantName": "hero-fullbleed",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-08-25T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://grace.com/",
+    "originPage": "Grace corporate homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + heading + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero with full-bleed background photo",
+      "landing page intros with overlaid heading and single CTA"
+    ],
+    "notSuitableFor": [
+      "text-only heros without background image",
+      "multi-CTA promotional banners"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-25T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,121 @@
+/* Block: cards-insights -- "Insights from Grace" blog card grid */
+
+/* Values extracted from grace.com computed styles. */
+
+.cards-insights > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.cards-insights > ul > li {
+  border: 0;
+  background: none;
+}
+
+/* View all insights link below the grid */
+.cards-insights > p {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Card image */
+.cards-insights .cards-insights-card-image {
+  line-height: 0;
+}
+
+.cards-insights .cards-insights-card-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Card body */
+.cards-insights .cards-insights-card-body {
+  margin: 15px 0 0;
+}
+
+/* Eyebrow (category label) */
+.cards-insights .cards-insights-card-body > p:first-child {
+  margin: 0 0 7.5px;
+  font-family: var(--body-font-family);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 17px;
+  color: var(--text-color);
+}
+
+/* Article title */
+.cards-insights .cards-insights-card-body h3 {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23.8px;
+}
+
+.cards-insights .cards-insights-card-body h3 a:any-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.cards-insights .cards-insights-card-body h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Read more link */
+.cards-insights .cards-insights-card-body > p:last-child {
+  margin: 8px 0 0;
+}
+
+.cards-insights .cards-insights-card-body > p:last-child a:any-link {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cards-insights .cards-insights-card-body > p:last-child a:hover {
+  text-decoration: underline;
+}
+
+/* Desktop: featured card (left) + 3 stacked cards (right) */
+@media (width >= 900px) {
+  .cards-insights > ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 40px;
+    align-items: start;
+  }
+
+  /* Featured card spans the full-height left column */
+  .cards-insights > ul > li:first-child {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+  }
+
+  .cards-insights > ul > li:first-child .cards-insights-card-body {
+    margin-top: 20px;
+  }
+
+  /* Stacked cards: text on the left, small image on the right */
+  .cards-insights > ul > li:not(:first-child) {
+    display: grid;
+    grid-template-columns: 1fr 209px;
+    column-gap: 20px;
+    align-items: start;
+  }
+
+  .cards-insights > ul > li:not(:first-child) .cards-insights-card-body {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 0;
+  }
+
+  .cards-insights > ul > li:not(:first-child) .cards-insights-card-image {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}

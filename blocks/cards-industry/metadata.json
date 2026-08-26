@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-industry",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-25T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://grace.com/",
+    "originPage": "Grace corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "industry",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image tile + green label link (no description)",
+    "buttonCount": 0,
+    "imageCount": 6
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "industry/category tile grids where each tile is an image with a short label link",
+      "3-across image navigation grids"
+    ],
+    "notSuitableFor": [
+      "cards with body copy or long descriptions",
+      "text-only cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-25T00:00:00.000Z"
+  }
+}

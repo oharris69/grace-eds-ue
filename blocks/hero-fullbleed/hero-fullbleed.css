@@ -1,0 +1,100 @@
+/* Block: hero-fullbleed
+ * Full-bleed dark background photo with overlaid white text + green CTA.
+ * Values extracted from grace.com .generic-hero computed styles. */
+
+/* Full-width: cancel the section content max-width/padding and vertical margins */
+.hero-fullbleed-container {
+  margin: 0;
+}
+
+.hero-fullbleed-container .hero-fullbleed-wrapper {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Block = the hero section itself */
+.hero-fullbleed {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  padding: 96px 24px;
+  background-image: url("https://grace.com/content/dam/grace-site/english/hero/home/homepage-option-7-one-grace.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+/* Content container (row > cell) */
+.hero-fullbleed > div > div {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* CTA button (raw <a>, not EDS-decorated) */
+.hero-fullbleed p:last-child {
+  margin: 0;
+}
+
+/* Eyebrow (patent number) */
+.hero-fullbleed > div > div > p:first-child {
+  margin: 0 0 12px;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* Headline */
+.hero-fullbleed h1 {
+  margin: 0 0 31.5px;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 100;
+  line-height: 1.35;
+  text-shadow: 0 1px 6px rgb(0 0 0 / 35%);
+}
+
+.hero-fullbleed a:any-link {
+  display: inline-block;
+  padding: 18px 30px;
+  border: 0;
+  border-radius: 0;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.hero-fullbleed a:hover,
+.hero-fullbleed a:focus-visible {
+  background-color: var(--link-color);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .hero-fullbleed {
+    min-height: 500px;
+    padding: 280px 100px 215px;
+  }
+
+  .hero-fullbleed h1 {
+    line-height: 57px;
+  }
+}
