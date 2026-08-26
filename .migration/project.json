@@ -1,15 +1,11 @@
 {
-  "type": "xwalk",
+  "type": "da",
   "sites": {
     "grace-eds-ue": {
       "previewOrg": "oharris69",
       "previewSite": "grace-eds-ue",
-      "contentHostUrl": "author-p7954-e1482380.adobeaemcloud.com",
-      "aemSitePath": "/content/grace-eds-ue",
-      "aemAssetsFolderPath": "/content/dam/grace-eds-ue",
-      "aemSiteName": "grace-eds-ue",
-      "aemSiteTitle": "Grace",
-      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json"
+      "daContentSource": "https://content.da.live/oharris69/grace-eds-ue/",
+      "aemSiteTitle": "Grace"
     }
   }
 }
