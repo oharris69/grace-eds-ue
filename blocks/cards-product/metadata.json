@@ -30,8 +30,8 @@
     ]
   },
   "usage": {
-    "pagesUsing": ["/index"],
-    "reuseCount": 1,
-    "lastUsed": "2026-08-25T00:00:00.000Z"
+    "pagesUsing": ["/index", "/products/index"],
+    "reuseCount": 2,
+    "lastUsed": "2026-08-26T00:00:00.000Z"
   }
 }

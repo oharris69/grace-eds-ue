@@ -43,6 +43,10 @@ export default function transform(hookName, element, payload) {
       'footer',
       '.contact-us-sticky',
       '.search-bar-cmp',
+      // Breadcrumb navigation (present on interior pages like /products/) and the
+      // skip-to-main-content link — navigation chrome, not authorable content.
+      '.breadcrumb',
+      'a[href="#main-content"]',
     ]);
 
     // Leftover non-authorable elements (verified in cleaned.html):

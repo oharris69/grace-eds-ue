@@ -1,7 +1,4 @@
 {
-  "metadata": {
-    "projectType": "xwalk"
-  },
   "templates": [
     {
       "name": "homepage",
@@ -13,7 +10,10 @@
       "blocks": [
         {
           "name": "hero-fullbleed",
-          "instances": [".generic-hero", ".hero__section"]
+          "instances": [
+            ".generic-hero",
+            ".hero__section"
+          ]
         },
         {
           "name": "cards-product",
@@ -50,9 +50,14 @@
         {
           "id": "section-1-hero",
           "name": "Hero",
-          "selector": ["#main-content > div.hero__content", ".generic-hero"],
+          "selector": [
+            "#main-content > div.hero__content",
+            ".generic-hero"
+          ],
           "style": null,
-          "blocks": ["hero-fullbleed"],
+          "blocks": [
+            "hero-fullbleed"
+          ],
           "defaultContent": []
         },
         {
@@ -77,8 +82,12 @@
             "div.section.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)"
           ],
           "style": null,
-          "blocks": ["cards-product"],
-          "defaultContent": ["div.section:has(div.col-xs-12.col-lg-3 > div.card a[href*=\"/products/\"]) h2"]
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "div.section:has(div.col-xs-12.col-lg-3 > div.card a[href*=\"/products/\"]) h2"
+          ]
         },
         {
           "id": "section-4-life",
@@ -88,7 +97,9 @@
             "div.section.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(5)"
           ],
           "style": null,
-          "blocks": ["columns-feature"],
+          "blocks": [
+            "columns-feature"
+          ],
           "defaultContent": []
         },
         {
@@ -99,7 +110,9 @@
             "div.section.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(6)"
           ],
           "style": null,
-          "blocks": ["cards-industry"],
+          "blocks": [
+            "cards-industry"
+          ],
           "defaultContent": [
             "div.section:has(.card-list a[href*=\"/industries/\"]) h3",
             "div.section:has(.card-list a[href*=\"/industries/\"]) .button a"
@@ -113,18 +126,117 @@
             "div.section.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(7)"
           ],
           "style": "dark-slate",
-          "blocks": ["columns-video"],
+          "blocks": [
+            "columns-video"
+          ],
           "defaultContent": []
         },
         {
           "id": "section-7-insights",
           "name": "Insights from Grace",
-          "selector": ["#blogs"],
+          "selector": [
+            "#blogs"
+          ],
           "style": "light-gray",
-          "blocks": ["cards-insights"],
-          "defaultContent": ["#blogs h2", "#blogs .button a"]
+          "blocks": [
+            "cards-insights"
+          ],
+          "defaultContent": [
+            "#blogs h2",
+            "#blogs .button a"
+          ]
         }
-      ]
+      ],
+      "urlPattern": "/"
+    },
+    {
+      "name": "products",
+      "urls": [
+        "https://grace.com/products/"
+      ],
+      "representativeUrl": "https://grace.com/products/",
+      "coverageGaps": [],
+      "description": "Grace products landing page: full-bleed hero, 2x2 product card grid, product stewardship intro (default content), and latest insights blog card row.",
+      "blocks": [
+        {
+          "name": "hero-fullbleed",
+          "instances": [
+            "div.generic-hero:has(h1)",
+            ".generic-hero"
+          ]
+        },
+        {
+          "name": "cards-product",
+          "instances": [
+            "div.section:has(> section article div.col-xs-12.col-lg-6 > div.card a[href*=\"/products/\"])"
+          ]
+        },
+        {
+          "name": "cards-insights",
+          "instances": [
+            "div.feature-blog:has(.blog-content)",
+            "div.section:has(.feature-blog)"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Hero",
+          "selector": [
+            "div.generic-hero:has(h1)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-fullbleed"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-products",
+          "name": "Products card grid",
+          "selector": [
+            "div.section:has(div.col-xs-12.col-lg-6 > div.card a[href*=\"/products/\"])"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3-intro",
+          "name": "Product Stewardship intro",
+          "selector": [
+            "div.section:has(> section .rich-text)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.section:has(> section .rich-text) h2",
+            "div.section:has(> section .rich-text) p"
+          ]
+        },
+        {
+          "id": "section-4-insights",
+          "name": "Latest Insights from Grace",
+          "selector": [
+            "div.section:has(.feature-blog)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-insights"
+          ],
+          "defaultContent": [
+            "div.section:has(.feature-blog) h2",
+            "div.section:has(.feature-blog) .header a"
+          ]
+        }
+      ],
+      "urlPattern": "/*"
     }
-  ]
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
 }

@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://grace.com/products/",
+  "path": "products",
+  "timestamp": "2026-08-26T20:12:47.932Z",
+  "title": "Products",
+  "template": "products",
+  "blocks": [
+    "hero-fullbleed",
+    "hero-fullbleed",
+    "cards-product",
+    "cards-product",
+    "cards-insights",
+    "cards-insights"
+  ]
+}
