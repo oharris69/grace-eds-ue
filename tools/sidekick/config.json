@@ -1,5 +1,5 @@
 {
   "project": "Grace",
-  "editUrlLabel": "Edit in DA",
-  "editUrlPattern": "https://da.live/edit#/oharris69/grace-eds-ue{{pathname}}"
+  "editUrlLabel": "Edit in Experience Workspace",
+  "editUrlPattern": "https://da.live/canvas#/oharris69/grace-eds-ue{{pathname}}"
 }
