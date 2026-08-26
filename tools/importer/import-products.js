@@ -26,7 +26,7 @@ const PAGE_TEMPLATE = {
   blocks: [
     { name: 'hero-fullbleed', instances: ['div.generic-hero:has(h1)', '.generic-hero'] },
     { name: 'cards-product', instances: ['div.section:has(> section article div.col-xs-12.col-lg-6 > div.card a[href*="/products/"])'] },
-    { name: 'cards-insights', instances: ['div.feature-blog:has(.blog-content)', 'div.section:has(.feature-blog)'] },
+    { name: 'cards-insights', instances: ['#owl-carousel'] },
   ],
   sections: [
     { id: 'section-1-hero', name: 'Hero', selector: ['div.generic-hero:has(h1)'], style: null, blocks: ['hero-fullbleed'], defaultContent: [] },

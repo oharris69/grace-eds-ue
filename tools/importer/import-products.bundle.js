@@ -131,11 +131,16 @@ var CustomImportScript = (() => {
 
   // tools/importer/parsers/cards-insights.js
   function parse3(element, { document: document2 }) {
-    let cards = Array.from(element.querySelectorAll(".single-media.image.row, .right-media.image.row"));
-    if (cards.length === 0) {
-      cards = Array.from(element.querySelectorAll('article:has(h5):has(a[href*="/insights/"])'));
+    const featureCards = Array.from(element.querySelectorAll("a.item, a.isNormalCard"));
+    const isFeatureBlog = featureCards.length > 0;
+    let cards = featureCards;
+    if (!isFeatureBlog) {
+      cards = Array.from(element.querySelectorAll(".single-media.image.row, .right-media.image.row"));
+      if (cards.length === 0) {
+        cards = Array.from(element.querySelectorAll('article:has(h5):has(a[href*="/insights/"])'));
+      }
+      if (cards.length === 0) cards = [element];
     }
-    if (cards.length === 0) cards = [element];
     const cells = [];
     cards.forEach((card) => {
       const img = card.querySelector(".media img, .image img, img");
@@ -144,12 +149,39 @@ var CustomImportScript = (() => {
         imageCell.appendChild(document2.createComment(" field:image "));
         imageCell.appendChild(img);
       }
+      const textCell = document2.createDocumentFragment();
+      textCell.appendChild(document2.createComment(" field:text "));
+      if (isFeatureBlog) {
+        const cardHref = card.getAttribute("href");
+        const tag = card.querySelector(".tag");
+        const heading = card.querySelector(".blog-heading");
+        const readMore = card.querySelector(".read-more");
+        if (tag) {
+          const p2 = document2.createElement("p");
+          p2.textContent = tag.textContent.replace(/\s+/g, " ").trim();
+          textCell.appendChild(p2);
+        }
+        if (heading) {
+          const h3 = document2.createElement("h3");
+          const a2 = document2.createElement("a");
+          a2.setAttribute("href", cardHref);
+          a2.textContent = heading.textContent.replace(/\s+/g, " ").trim();
+          h3.appendChild(a2);
+          textCell.appendChild(h3);
+        }
+        const p = document2.createElement("p");
+        const a = document2.createElement("a");
+        a.setAttribute("href", cardHref);
+        a.textContent = (readMore ? readMore.textContent : "Read more").replace(/\s+/g, " ").trim();
+        p.appendChild(a);
+        textCell.appendChild(p);
+        cells.push([imageCell, textCell]);
+        return;
+      }
       const eyebrow = card.querySelector("h5");
       const links = Array.from(card.querySelectorAll("a[href]"));
       const titleLink = links[0];
       const extraLinks = links.slice(1);
-      const textCell = document2.createDocumentFragment();
-      textCell.appendChild(document2.createComment(" field:text "));
       if (eyebrow) {
         const p = document2.createElement("p");
         p.textContent = eyebrow.textContent.replace(/\s+/g, " ").trim();
@@ -344,7 +376,7 @@ var CustomImportScript = (() => {
     blocks: [
       { name: "hero-fullbleed", instances: ["div.generic-hero:has(h1)", ".generic-hero"] },
       { name: "cards-product", instances: ['div.section:has(> section article div.col-xs-12.col-lg-6 > div.card a[href*="/products/"])'] },
-      { name: "cards-insights", instances: ["div.feature-blog:has(.blog-content)", "div.section:has(.feature-blog)"] }
+      { name: "cards-insights", instances: ["#owl-carousel"] }
     ],
     sections: [
       { id: "section-1-hero", name: "Hero", selector: ["div.generic-hero:has(h1)"], style: null, blocks: ["hero-fullbleed"], defaultContent: [] },

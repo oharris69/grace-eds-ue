@@ -174,8 +174,7 @@
         {
           "name": "cards-insights",
           "instances": [
-            "div.feature-blog:has(.blog-content)",
-            "div.section:has(.feature-blog)"
+            "#owl-carousel"
           ]
         }
       ],
