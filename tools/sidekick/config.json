@@ -1,5 +1,5 @@
 {
-  "project": "AEM XWalk Boilerplate",
-  "editUrlLabel": "AEM Editor",
-  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open"
+  "project": "Grace",
+  "editUrlLabel": "Edit in DA",
+  "editUrlPattern": "https://da.live/edit#/oharris69/grace-eds-ue{{pathname}}"
 }
