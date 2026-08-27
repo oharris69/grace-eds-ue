@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://grace.com/people-and-careers/",
+  "path": "people-and-careers",
+  "timestamp": "2026-08-27T14:12:31.635Z",
+  "title": "People and Careers",
+  "template": "people-and-careers",
+  "blocks": [
+    "hero-fullbleed",
+    "cards-product",
+    "cards-product"
+  ]
+}

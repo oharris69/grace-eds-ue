@@ -370,7 +370,72 @@
           ]
         }
       ],
-      "urlPattern": "/industries/*"
+      "urlPattern": "/*"
+    },
+    {
+      "name": "people-and-careers",
+      "urls": [
+        "https://grace.com/people-and-careers/"
+      ],
+      "representativeUrl": "https://grace.com/people-and-careers/",
+      "coverageGaps": [],
+      "description": "Grace People and Careers landing page: full-bleed hero, Grow Your Career intro (default content), and a 2x2 career-pathway card grid.",
+      "blocks": [
+        {
+          "name": "hero-fullbleed",
+          "instances": [
+            "div.generic-hero:has(h1)",
+            ".generic-hero"
+          ]
+        },
+        {
+          "name": "cards-product",
+          "instances": [
+            "div.row:has(> div.col-xs-12.col-lg-6 > div.card a[href*=\"/people-and-careers/\"])"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Hero",
+          "selector": [
+            "div.generic-hero:has(h1)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-fullbleed"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-intro",
+          "name": "Grow Your Career at Grace",
+          "selector": [
+            "div.section:has(.rich-text h2)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.section:has(.rich-text h2) h2",
+            "div.section:has(.rich-text h2) p",
+            "div.section:has(.rich-text h2) ul"
+          ]
+        },
+        {
+          "id": "section-3-cards",
+          "name": "Career pathway cards",
+          "selector": [
+            "div.row:has(> div.col-xs-12.col-lg-6 > div.card a[href*=\"/people-and-careers/\"])"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": []
+        }
+      ],
+      "urlPattern": "/people-and-careers/*"
     }
   ],
   "metadata": {
