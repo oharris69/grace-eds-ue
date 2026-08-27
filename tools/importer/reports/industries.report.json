@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://grace.com/industries/",
+  "path": "industries",
+  "timestamp": "2026-08-27T13:05:06.336Z",
+  "title": "Industries",
+  "template": "industries",
+  "blocks": [
+    "hero-fullbleed",
+    "hero-fullbleed",
+    "cards-industry",
+    "cards-insights"
+  ]
+}

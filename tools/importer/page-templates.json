@@ -283,7 +283,94 @@
           "defaultContent": []
         }
       ],
-      "urlPattern": "/about-grace/*"
+      "urlPattern": "/*"
+    },
+    {
+      "name": "industries",
+      "urls": [
+        "https://grace.com/industries/"
+      ],
+      "representativeUrl": "https://grace.com/industries/",
+      "coverageGaps": [],
+      "description": "Grace Industries landing page: full-bleed hero, intro statement, 3-column industry tile grid (11 tiles), and latest insights blog row.",
+      "blocks": [
+        {
+          "name": "hero-fullbleed",
+          "instances": [
+            "div.generic-hero:has(h1)",
+            ".generic-hero"
+          ]
+        },
+        {
+          "name": "cards-industry",
+          "instances": [
+            "div.card-list:has(a[href*=\"/industries/\"])"
+          ]
+        },
+        {
+          "name": "cards-insights",
+          "instances": [
+            "#owl-carousel"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Hero",
+          "selector": [
+            "div.generic-hero:has(h1)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-fullbleed"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-intro",
+          "name": "Intro statement",
+          "selector": [
+            "div.section:has(> section .rich-text)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.section:has(> section .rich-text) h4",
+            "div.section:has(> section .rich-text) p"
+          ]
+        },
+        {
+          "id": "section-3-tiles",
+          "name": "Industries tile grid",
+          "selector": [
+            "div.section:has(.card-list a[href*=\"/industries/\"])"
+          ],
+          "style": "light-gray",
+          "blocks": [
+            "cards-industry"
+          ],
+          "defaultContent": [
+            "div.section:has(.card-list a[href*=\"/industries/\"]) h2"
+          ]
+        },
+        {
+          "id": "section-4-insights",
+          "name": "Latest Insights from Grace",
+          "selector": [
+            "div.section:has(.feature-blog)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-insights"
+          ],
+          "defaultContent": [
+            "div.section:has(.feature-blog) h2",
+            "div.section:has(.feature-blog) .header a"
+          ]
+        }
+      ],
+      "urlPattern": "/industries/*"
     }
   ],
   "metadata": {

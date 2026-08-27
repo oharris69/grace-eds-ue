@@ -29,13 +29,15 @@ export default function parse(element, { document }) {
       imageCell.appendChild(img);
     }
 
-    // Label text (tile name). Lives in .content .cta / .text. The source also
-    // carries a hidden "PROMOTION" eyebrow (p.h5) that is NOT rendered — prefer
-    // the CTA/label element and strip a leading "PROMOTION" if it slips in.
-    const labelEl = card.querySelector('.content .cta, .content .text .cta, .content .text, .content');
+    // Label text (tile name). Prefer the explicit title element (p.title / .h4.title)
+    // so we get just the industry name — not the "Learn more" CTA that some tile
+    // variants append, nor the hidden "PROMOTION" eyebrow (p.h5). Fall back to the
+    // CTA/text/content, then aria-label; finally strip a stray leading "PROMOTION"
+    // and a trailing "Learn more".
+    const labelEl = card.querySelector('.content .title, .content p.title, .content .text .cta, .content .cta, .content .text, .content');
     let label = labelEl ? labelEl.textContent.replace(/\s+/g, ' ').trim() : '';
     if (!label) label = (card.getAttribute('aria-label') || card.textContent).replace(/\s+/g, ' ').trim();
-    label = label.replace(/^\s*PROMOTION\s*/i, '').trim();
+    label = label.replace(/^\s*PROMOTION\s*/i, '').replace(/\s*Learn more\s*$/i, '').trim();
 
     const textCell = document.createDocumentFragment();
     textCell.appendChild(document.createComment(' field:text '));

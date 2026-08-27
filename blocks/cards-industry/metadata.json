@@ -30,8 +30,12 @@
     ]
   },
   "usage": {
-    "pagesUsing": ["/index", "/about-grace/index"],
-    "reuseCount": 2,
-    "lastUsed": "2026-08-27T00:00:00.000Z"
+    "pagesUsing": [
+      "/index",
+      "/about-grace/index",
+      "/industries/index"
+    ],
+    "reuseCount": 3,
+    "lastUsed": "2026-08-27T12:58:07.315928+00:00"
   }
 }
