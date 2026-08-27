@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://grace.com/about-grace/",
+  "path": "about-grace",
+  "timestamp": "2026-08-27T00:48:56.268Z",
+  "title": "About Grace",
+  "template": "about-grace",
+  "blocks": [
+    "hero-fullbleed",
+    "cards-industry"
+  ]
+}

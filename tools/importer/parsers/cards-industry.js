@@ -7,8 +7,13 @@
  * (industry name, no description). Whole card links to /industries/*.
  */
 export default function parse(element, { document }) {
-  // The instance selector matches the card-list container; each card is an anchor.
-  let cards = Array.from(element.querySelectorAll('a.cmp-card, a[href*="/industries/"]'));
+  // Scope to real tile cards inside the card grid (.card-item / .card-group),
+  // which excludes unrelated .cmp-card anchors elsewhere on the page (e.g. the
+  // pre-footer "Standard Industries" logo card). Fall back to broader selectors.
+  let cards = Array.from(element.querySelectorAll('.card-item a.cmp-card, .card-group a.cmp-card'));
+  if (cards.length === 0) {
+    cards = Array.from(element.querySelectorAll('a.cmp-card, a[href*="/industries/"]'));
+  }
   if (cards.length === 0 && element.matches('a')) cards = [element];
 
   const cells = [];
@@ -24,10 +29,13 @@ export default function parse(element, { document }) {
       imageCell.appendChild(img);
     }
 
-    // Label text (industry name). Lives in .content .cta (or aria-label as fallback).
-    const labelEl = card.querySelector('.content .cta, .content .text, .content');
+    // Label text (tile name). Lives in .content .cta / .text. The source also
+    // carries a hidden "PROMOTION" eyebrow (p.h5) that is NOT rendered — prefer
+    // the CTA/label element and strip a leading "PROMOTION" if it slips in.
+    const labelEl = card.querySelector('.content .cta, .content .text .cta, .content .text, .content');
     let label = labelEl ? labelEl.textContent.replace(/\s+/g, ' ').trim() : '';
     if (!label) label = (card.getAttribute('aria-label') || card.textContent).replace(/\s+/g, ' ').trim();
+    label = label.replace(/^\s*PROMOTION\s*/i, '').trim();
 
     const textCell = document.createDocumentFragment();
     textCell.appendChild(document.createComment(' field:text '));

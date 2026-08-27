@@ -233,6 +233,57 @@
         }
       ],
       "urlPattern": "/*"
+    },
+    {
+      "name": "about-grace",
+      "urls": [
+        "https://grace.com/about-grace/"
+      ],
+      "representativeUrl": "https://grace.com/about-grace/",
+      "coverageGaps": [],
+      "description": "Grace About page: full-bleed hero and a 3-column grid of navigation tiles linking to About subpages.",
+      "blocks": [
+        {
+          "name": "hero-fullbleed",
+          "instances": [
+            "div.generic-hero:has(h1)",
+            ".generic-hero"
+          ]
+        },
+        {
+          "name": "cards-industry",
+          "instances": [
+            "div.card-list:has(a[href*=\"/about-grace/\"])"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Hero",
+          "selector": [
+            "div.generic-hero:has(h1)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-fullbleed"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-tiles",
+          "name": "About Grace navigation tile grid",
+          "selector": [
+            "div.section:has(.card-list a[href*=\"/about-grace/\"])"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-industry"
+          ],
+          "defaultContent": []
+        }
+      ],
+      "urlPattern": "/about-grace/*"
     }
   ],
   "metadata": {
