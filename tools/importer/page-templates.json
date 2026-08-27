@@ -435,7 +435,164 @@
           "defaultContent": []
         }
       ],
-      "urlPattern": "/people-and-careers/*"
+      "urlPattern": "/*"
+    },
+    {
+      "name": "contact-us",
+      "urls": [
+        "https://grace.com/contact-us/"
+      ],
+      "representativeUrl": "https://grace.com/contact-us/",
+      "description": "Grace Contact Us page: single light-gray section with a centered heading and a 3-up grid of contact tiles (icon + heading + bulleted list + optional green CTA).",
+      "blocks": [
+        {
+          "name": "cards-contact",
+          "instances": [
+            "section.none-bkgd:has(.col-xs-12.col-lg-4 .btn-primary-green)",
+            "section.none-bkgd:has(.col-xs-12.col-lg-4)"
+          ]
+        }
+      ],
+      "urlPattern": "/*",
+      "sections": [
+        {
+          "id": "section-1-help",
+          "name": "How can we help you? contact tiles",
+          "selector": [
+            "section.light-gray-bkgd:has(.col-xs-12.col-lg-4)"
+          ],
+          "style": "light-gray",
+          "blocks": [
+            "cards-contact"
+          ],
+          "defaultContent": [
+            "div.text:has(h2)"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "resources",
+      "urls": [
+        "https://grace.com/resources/"
+      ],
+      "representativeUrl": "https://grace.com/resources/",
+      "description": "Grace Resources page: full-bleed dark-blue hero band with a single heading, then a 3-up promotional card grid (Catalagram, Insights, Newsroom).",
+      "blocks": [
+        {
+          "name": "cards-resource",
+          "instances": [
+            ".cmp-card-list.grid.three-columns"
+          ]
+        }
+      ],
+      "urlPattern": "/*",
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Resources hero band",
+          "selector": [
+            "div.generic-hero:has(.hero__heading)",
+            "div.hero__section.dark-blue-bkgd"
+          ],
+          "style": "dark-blue",
+          "blocks": [],
+          "defaultContent": [
+            "div.generic-hero .hero__heading"
+          ]
+        },
+        {
+          "id": "section-2-cards",
+          "name": "Resources promotional card grid",
+          "selector": [
+            "div.section:has(.cmp-card-list.three-columns)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-resource"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "vendor-suppliers",
+      "urls": [
+        "https://grace.com/vendor-suppliers/"
+      ],
+      "representativeUrl": "https://grace.com/vendor-suppliers/",
+      "description": "Grace Vendors and Suppliers page: full-bleed hero, intro statement, a light-gray section with two icon-card grids (Working with Grace; Supplier Support and FAQs), and a green Contact Us / S2P Navigator callout.",
+      "blocks": [
+        {
+          "name": "hero-fullbleed",
+          "instances": [
+            "div.generic-hero:has(.hero__heading) .hero__section",
+            ".hero__section.background-image"
+          ]
+        },
+        {
+          "name": "cards-contact",
+          "instances": [
+            ".cmp-card-list.grid.three-columns:has(.card-group)",
+            "section#video-threefeature"
+          ]
+        }
+      ],
+      "urlPattern": "/*",
+      "sections": [
+        {
+          "id": "section-1-hero",
+          "name": "Hero - Delivering Value",
+          "selector": [
+            "div.generic-hero:has(.hero__heading) .hero__section",
+            ".hero__section.background-image"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-fullbleed"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-intro",
+          "name": "Intro statement",
+          "selector": [
+            "div.section:has(> .aem-Grid .text .rich-text h4):not(:has(.card-list)):not(:has(.cmp-card-list))"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.section .text:has(h4)"
+          ]
+        },
+        {
+          "id": "section-3-working-and-support",
+          "name": "Working with Grace + Supplier Support and FAQs",
+          "selector": [
+            "section.light-gray-bkgd:has(.cmp-card-list)"
+          ],
+          "style": "light-gray",
+          "blocks": [
+            "cards-contact"
+          ],
+          "defaultContent": [
+            "div.card-list .heading:has(h2)",
+            "#text-35a108d354"
+          ]
+        },
+        {
+          "id": "section-4-contact-callout",
+          "name": "Contact Us / S2P Navigator callout",
+          "selector": [
+            ".contactus__content-desktop.green-bkgd"
+          ],
+          "style": "green",
+          "blocks": [],
+          "defaultContent": [
+            ".contactus__content-desktop.green-bkgd"
+          ]
+        }
+      ]
     }
   ],
   "metadata": {

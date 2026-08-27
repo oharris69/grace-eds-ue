@@ -1,0 +1,88 @@
+/* Block: cards-resource -- 3-up promotional card grid (image + green title), whole card links out.
+   Same Grace card component as cards-product but rendered full-width 3-up (source: grid three-columns). */
+
+.cards-resource > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+/* Cards are borderless/transparent on the source -- image on top, centered text below */
+.cards-resource > ul > li {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+/* Image: full width, wide landscape crop, cover */
+.cards-resource .cards-resource-card-image {
+  line-height: 0;
+}
+
+.cards-resource .cards-resource-card-image p {
+  margin: 0;
+}
+
+.cards-resource > ul > li img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 280 / 127;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Text block: centered, sits below image */
+.cards-resource .cards-resource-card-body {
+  margin: 0;
+  padding-top: 24px;
+  text-align: center;
+}
+
+/* Caption: Roboto Slab regular, black, centered */
+.cards-resource .cards-resource-card-body p {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Hide the "PROMOTION" eyebrow -- data artifact, hidden on source */
+.cards-resource .cards-resource-card-body > p:first-child {
+  display: none;
+}
+
+/* Title: Roboto Slab, semibold, brand link green, centered */
+.cards-resource .cards-resource-card-body h3 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--link-color);
+  text-align: center;
+}
+
+.cards-resource .cards-resource-card-body h3 a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* tablet: 2-up */
+@media (width >= 600px) {
+  .cards-resource > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* desktop: 3-up full-width */
+@media (width >= 900px) {
+  .cards-resource > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

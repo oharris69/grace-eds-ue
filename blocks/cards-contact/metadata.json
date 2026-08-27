@@ -1,0 +1,42 @@
+{
+  "variantName": "cards-contact",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-27T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://grace.com/contact-us/",
+    "originPage": "Grace Contact Us page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "contact",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + heading + bulleted list of links + optional CTA button",
+    "buttonCount": 2,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "contact/help tile grids where each tile has an icon, heading, and list of links",
+      "how-can-we-help sections routing users to forms",
+      "icon-led navigation tiles with an optional CTA button"
+    ],
+    "notSuitableFor": [
+      "photo/product card grids with large cover images (use cards-product)",
+      "image tile + single label link grids (use cards-industry)",
+      "blog/insights card grids (use cards-insights)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/contact-us/index",
+      "/vendor-suppliers/index"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-08-27T17:31:31.040694+00:00"
+  }
+}

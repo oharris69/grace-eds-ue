@@ -1,11 +1,13 @@
 {
   "type": "da",
+  "pluginRoot": "/home/node/.excat-marketplaces/excat-marketplace/excat",
   "sites": {
     "grace-eds-ue": {
       "previewOrg": "oharris69",
       "previewSite": "grace-eds-ue",
       "daContentSource": "https://content.da.live/oharris69/grace-eds-ue/",
-      "aemSiteTitle": "Grace"
+      "aemSiteTitle": "Grace",
+      "contentHostUrl": "https://content.da.live/oharris69/grace-eds-ue/"
     }
   }
 }

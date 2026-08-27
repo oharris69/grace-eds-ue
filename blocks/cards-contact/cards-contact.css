@@ -1,0 +1,80 @@
+/* Block: cards-contact -- "How can we help you?" contact tiles.
+   Each card: centered icon + h4 heading + bulleted list of links + optional green CTA.
+   White cards sit on the section's light-gray background. */
+
+.cards-contact > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 900px) {
+  .cards-contact > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* White card tile with generous padding, content stacked and centered */
+.cards-contact > ul > li {
+  border: none;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+}
+
+/* Icon image at top of card */
+.cards-contact .cards-contact-card-image {
+  line-height: 0;
+  margin-bottom: 16px;
+}
+
+.cards-contact .cards-contact-card-image img {
+  width: auto;
+  height: 96px;
+  object-fit: contain;
+}
+
+/* Body: heading + list (+ optional CTA) */
+.cards-contact .cards-contact-card-body {
+  width: 100%;
+  text-align: left;
+}
+
+.cards-contact .cards-contact-card-body h4 {
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.cards-contact .cards-contact-card-body ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.cards-contact .cards-contact-card-body li {
+  margin: 4px 0;
+}
+
+/* Green CTA button, centered below the list */
+.cards-contact .cards-contact-card-body .button-container {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.cards-contact .cards-contact-card-body a.button {
+  display: inline-block;
+  background-color: var(--link-color, #6bab3e);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 2px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cards-contact .cards-contact-card-body a.button:hover {
+  background-color: var(--link-hover-color, #5a9433);
+}

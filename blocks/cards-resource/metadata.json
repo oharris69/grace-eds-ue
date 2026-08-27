@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-resource",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-27T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://grace.com/resources/",
+    "originPage": "Grace Resources landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "resource-nav",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + hidden eyebrow + green title (whole-card link)",
+    "buttonCount": 0,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "3-up full-width promotional/navigation card grids with cover image + green title",
+      "resource hub tiles where each card links to a section (whole-card link)"
+    ],
+    "notSuitableFor": [
+      "4-up product grids (use cards-product)",
+      "image tile + green label bar grids (use cards-industry)",
+      "blog/insights grids with eyebrow + read-more (use cards-insights)",
+      "icon + heading + bulleted list tiles (use cards-contact)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/resources/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-27T00:00:00.000Z"
+  }
+}

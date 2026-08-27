@@ -35,9 +35,10 @@
       "/products/index",
       "/about-grace/index",
       "/industries/index",
-      "/people-and-careers/index"
+      "/people-and-careers/index",
+      "/vendor-suppliers/index"
     ],
-    "reuseCount": 5,
-    "lastUsed": "2026-08-27T14:06:11.255420+00:00"
+    "reuseCount": 6,
+    "lastUsed": "2026-08-27T17:31:31.040694+00:00"
   }
 }
