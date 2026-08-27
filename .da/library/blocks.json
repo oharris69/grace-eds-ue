@@ -1,0 +1,20 @@
+{
+  "total": 10,
+  "limit": 10,
+  "offset": 0,
+  "data": [
+    { "name": "Hero (Full Bleed)", "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks/hero-fullbleed", "focal-point": "yes" },
+    { "name": "Cards (Product)", "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks/cards-product", "focal-point": "" },
+    { "name": "Cards (Industry)", "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks/cards-industry", "focal-point": "" },
+    { "name": "Cards (Insights)", "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks/cards-insights", "focal-point": "" },
+    { "name": "Cards (Resource)", "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks/cards-resource", "focal-point": "" },
+    { "name": "Cards (Contact)", "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks/cards-contact", "focal-point": "" },
+    { "name": "Columns (Feature)", "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks/columns-feature", "focal-point": "" },
+    { "name": "Columns (Video)", "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks/columns-video", "focal-point": "" },
+    { "name": "Section Metadata", "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks/section-metadata", "focal-point": "" },
+    { "name": "Metadata", "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks/metadata", "focal-point": "" }
+  ],
+  ":colWidths": [180, 660, 90],
+  ":sheetname": "data",
+  ":type": "sheet"
+}

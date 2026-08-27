@@ -1,0 +1,16 @@
+{
+  "total": 6,
+  "limit": 6,
+  "offset": 0,
+  "data": [
+    { "key": "Homepage", "value": "https://content.da.live/oharris69/grace-eds-ue/docs/library/templates/homepage" },
+    { "key": "Industry Landing Page", "value": "https://content.da.live/oharris69/grace-eds-ue/docs/library/templates/industry-landing-page" },
+    { "key": "Products Landing Page", "value": "https://content.da.live/oharris69/grace-eds-ue/docs/library/templates/products-landing-page" },
+    { "key": "Resources Landing Page", "value": "https://content.da.live/oharris69/grace-eds-ue/docs/library/templates/resources-landing-page" },
+    { "key": "About / Careers Page", "value": "https://content.da.live/oharris69/grace-eds-ue/docs/library/templates/about-page" },
+    { "key": "Contact Us Page", "value": "https://content.da.live/oharris69/grace-eds-ue/docs/library/templates/contact-us-page" }
+  ],
+  ":colWidths": [220, 620],
+  ":sheetname": "data",
+  ":type": "sheet"
+}

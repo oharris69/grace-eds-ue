@@ -1,0 +1,45 @@
+{
+  "flags": {
+    "total": 2,
+    "limit": 2,
+    "offset": 0,
+    "data": [
+      { "key": "ew.enabled", "value": "true" },
+      { "key": "ew.canvasDefaultView", "value": "split" }
+    ]
+  },
+  "library": {
+    "total": 3,
+    "limit": 3,
+    "offset": 0,
+    "data": [
+      {
+        "title": "Blocks",
+        "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/blocks.json",
+        "format": "",
+        "icon": "",
+        "experience": "",
+        "ref": ""
+      },
+      {
+        "title": "Templates",
+        "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/templates.json",
+        "format": "",
+        "icon": "",
+        "experience": "",
+        "ref": ""
+      },
+      {
+        "title": "Icons",
+        "path": "https://content.da.live/oharris69/grace-eds-ue/docs/library/icons.json",
+        "format": ":<content>:",
+        "icon": "",
+        "experience": "",
+        "ref": ""
+      }
+    ]
+  },
+  ":names": ["flags", "library"],
+  ":version": 3,
+  ":type": "multi-sheet"
+}
